@@ -19,7 +19,7 @@ const Blog = ({blog,addBlogHandeler,handelTime}) => {
                         <span style={{color:'gray'}}>{date}</span>
                     </div>
                 </div>
-                <span style={{color:'gray'}}>{time} min read <FontAwesomeIcon style={{cursor:'pointer'}} onClick={()=> handelTime(time)} icon={faBookmark} /></span>
+                <span style={{color:'gray'}}>{time} min read <FontAwesomeIcon style={{cursor:'pointer'}} onClick={()=> addBlogHandeler(blog)} icon={faBookmark} /></span>
             </div>
             <h3>{title}</h3>
             <div style={{display:'flex'}}>{
@@ -29,7 +29,7 @@ const Blog = ({blog,addBlogHandeler,handelTime}) => {
                     </>
                 })
             }</div>
-            <h6 onClick={()=>addBlogHandeler(blog)} style={{color:'#6047EC',textDecoration:'underline',cursor:'pointer'}}>Mark as read</h6>
+            <h6 onClick={()=> handelTime(time)} style={{color:'#6047EC',textDecoration:'underline',cursor:'pointer'}}>Mark as read</h6>
         </div>
     );
 };

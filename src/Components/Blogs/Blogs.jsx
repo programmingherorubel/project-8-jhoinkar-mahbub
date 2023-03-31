@@ -17,8 +17,8 @@ const Blogs = () => {
     },[])
 
     // add to cart 
-    const handelTime = (information)=>{
-        setTime([...time,information])
+    const handelTime = (hadeltime)=>{
+        setTime([...time,hadeltime])
         toast.success('read Minutes added', {
             position: "top-center",
             autoClose: 500,
@@ -29,27 +29,29 @@ const Blogs = () => {
             progress: undefined,
             theme: "colored",
             });
+
     }
 
 
     
-    const addBlogHandeler = (totalBlog)=>{
-        const toeastAlert = selectBlog.find(temp => temp.title === totalBlog.title )
-        if(toeastAlert){
-    
-            toast.error('This Blog already added', {
-                position: "top-center",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "colored",
-                });
-        }else{
-            setSelectBlog([...selectBlog,totalBlog])
-        }
+    const addBlogHandeler = (information)=>{
+        console.log(information)
+        const toeastAlert = selectBlog.find(temp => temp.title === information.title )
+            if(toeastAlert){
+        
+                toast.error('This Blog already added', {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                    });
+            }else{
+                setSelectBlog([...selectBlog,information])
+            }
     }
 
 
@@ -59,7 +61,7 @@ const Blogs = () => {
                 <Col md={8}>
                     <Row>
                         {
-                            blogs.map((blog,index) => <Blog handelTime={handelTime} addBlogHandeler={addBlogHandeler} blog={blog}  key={index} />)
+                            blogs.map((blog,index) => <Blog blog={blog} handelTime={handelTime} addBlogHandeler={addBlogHandeler} key={index} />)
                         }
                     </Row>
                 </Col>
