@@ -1,0 +1,59 @@
+[
+    {
+      "blogImg": "https://i.ibb.co/9908dsn/chatgtp.jpg",
+      "userLogo": "https://i.ibb.co/GpVFxy4/abc-4.png",
+      "userName": "Dabit Hars",
+      "date": "Mar 14 (4 Days ago)",
+      "title": "What is chat GTP used for?",
+      "tags": [
+        "beginners",
+        "programming"
+      ],
+      "time": 12
+    },
+    {
+      "blogImg": "https://i.ibb.co/fGYSY4S/ai.jpg",
+      "userLogo": "https://i.ibb.co/wS8dRWF/abc-1.png",
+      "userName": "Roks Harm",
+      "date": "Mar 12 (3 Days ago)",
+      "title": "What are the 4 types of artificial intelligence?",
+      "tags": [
+        "beginners",
+        "programming"
+      ],
+      "time": 20
+    },
+    {
+      "blogImg": "https://i.ibb.co/HD9cXDF/mern-developement.jpg",
+      "userLogo": "https://i.ibb.co/yR4Mr9h/abc-2.png",
+      "userName": "Pinit Roy",
+      "date": "Mar 16 (5 Days ago)",
+      "title": "MERN Stack: MERN Stack is a Javascript Stack that is used for easier and faster deployment of full-stack web applications.",
+      "tags": [
+        "beginners",
+        "programming"
+      ],
+      "time": 30
+    },
+    {
+      "blogImg": "https://i.ibb.co/yFPdwQh/react.jpg",
+      "userLogo": "https://i.ibb.co/YT1L6Tr/abc-3.png",
+      "userName": "Jhon Readdy",
+      "date": "Mar 10 (8 Days ago)",
+      "title": "The Beauty of React.js",
+      "tags": [
+        "beginners",
+        "programming"
+      ],
+      "time": 40
+    }
+  ]
+
+
+
+
+
+
+
+
+
