@@ -1,0 +1,6 @@
+.navbarcustom{
+    position: sticky;
+    top: 0;
+    z-index: 1000!important;
+    background-color: white;
+}

@@ -5,6 +5,8 @@ import BookMark from '../BookMark/BookMark';
 import Time from '../Time/Time';
 import Blog from './Blog/Blog';
 
+
+
 const Blogs = () => {
     const [blogs,setBlogs]=useState([])
     const [selectBlog,setSelectBlog]=useState([])
@@ -56,7 +58,7 @@ const Blogs = () => {
 
 
     return (
-        <Container>
+        <Container style={{zIndex: '100'}}>
             <Row className='mt-2'>
                 <Col md={8}>
                     <Row>
@@ -65,7 +67,7 @@ const Blogs = () => {
                         }
                     </Row>
                 </Col>
-                <Col md={4}>
+                <Col md={4} >
                     <Time time={time} />
                     <BookMark selectBlog={selectBlog} />
                 </Col>

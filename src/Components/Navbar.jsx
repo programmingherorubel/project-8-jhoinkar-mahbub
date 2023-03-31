@@ -1,10 +1,17 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import logo from '../img/logo-social.png'
+import './Navbar.css'
 
 const Navbar = () => {
     return (
-       <Container fluid className='p-2' style={{boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px'}}>
+        <div className='navbarcustom'>
+       <Container
+            fluid
+            className='p-2' 
+            style={{
+                boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px',
+                }}>
              <Container>
                 <Row>
                     <Col>
@@ -19,6 +26,7 @@ const Navbar = () => {
                 </Row>
             </Container>
        </Container>
+       </div>
     );
 };
 
