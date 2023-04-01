@@ -4,6 +4,7 @@ import { toast } from 'react-toastify';
 import BookMark from '../BookMark/BookMark';
 import Time from '../Time/Time';
 import Blog from './Blog/Blog';
+import Accordion from 'react-bootstrap/Accordion';
 
 
 
@@ -37,7 +38,6 @@ const Blogs = () => {
 
     
     const addBlogHandeler = (information)=>{
-        console.log(information)
         const toeastAlert = selectBlog.find(temp => temp.title === information.title )
             if(toeastAlert){
         
@@ -51,9 +51,8 @@ const Blogs = () => {
                     progress: undefined,
                     theme: "colored",
                     });
-            }else{
-                setSelectBlog([...selectBlog,information])
             }
+            setSelectBlog([...selectBlog,information])
     }
 
 
@@ -70,6 +69,39 @@ const Blogs = () => {
                 <Col md={4} >
                     <Time time={time} />
                     <BookMark selectBlog={selectBlog} />
+                </Col>
+            </Row>
+            <Row>
+                <Col md={8} className="mx-auto mt-5 mb-5">
+                    <Accordion defaultActiveKey="0">
+                        <Accordion.Item eventKey="0">
+                            <Accordion.Header>what is the defferens between props and state ? </Accordion.Header>
+                            <Accordion.Body>
+                            When you try to send value from one component to other you can't change the press. You can change the state then data render newly.
+                            </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey="1">
+                            <Accordion.Header>how to work useState ?</Accordion.Header>
+                            <Accordion.Body>
+                            State is an object. We can save data in state and anyone can Send state from  one component to another.
+                            </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey="2">
+                            <Accordion.Header>activities of useEffect ? </Accordion.Header>
+                            <Accordion.Body>
+                                useEffect works by side effects,
+                            when the useEffect is changed date will re- render. We can send propose to one component to another. 
+                            </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey="3">
+                            <Accordion.Header>how doese react work ?</Accordion.Header>
+                            <Accordion.Body>
+                            THERE are many component on react like nested component and all are used as a Root component and the return "X"
+
+                            And web pack take all the things and convert it. Browser run this simple converted Vanila Javascript.
+                            </Accordion.Body>
+                        </Accordion.Item>
+                    </Accordion>
                 </Col>
             </Row>
         </Container>
